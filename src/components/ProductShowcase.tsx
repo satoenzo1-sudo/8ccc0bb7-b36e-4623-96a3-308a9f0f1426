@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 
-const TestimonialSlideshow = () => {
+const ProductShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   const slides = [
-    '/lovable-uploads/541e2071-31fc-4a94-b096-95b7fb52fa36.png',
-    '/lovable-uploads/23cda1bf-36d2-43aa-8cac-757bfa7f62d1.png',
-    '/lovable-uploads/9b9ec543-349e-446a-88eb-5dcb4af29b0d.png',
-    '/lovable-uploads/d6b87898-f620-451c-b333-1d28bbb9fea3.png'
+    '/lovable-uploads/00b09188-d93f-4500-83b1-d88a6fc7bfed.png',
+    '/lovable-uploads/33436acd-c481-42bd-b437-e48cf4a29f7a.png',
+    '/lovable-uploads/1bfb3859-4012-406f-b929-5eb0bb468af4.png',
+    '/lovable-uploads/846bbf1d-4306-4374-b3de-f325701f7a4a.png'
   ];
 
   const showNextSlide = () => {
@@ -34,7 +34,7 @@ const TestimonialSlideshow = () => {
 
   return (
     <div 
-      className="testimonial-carousel relative w-full max-w-[600px] mx-auto my-10 rounded-xl overflow-hidden shadow-lg"
+      className="forgotten-carousel relative w-full max-w-[600px] mx-auto my-10 rounded-xl overflow-hidden shadow-lg"
       onMouseEnter={stopInterval}
       onMouseLeave={startInterval}
     >
@@ -42,8 +42,8 @@ const TestimonialSlideshow = () => {
         <img
           key={index}
           src={slide}
-          alt={`Depoimento ${index + 1}`}
-          className={`testimonial w-full h-auto block absolute top-0 left-0 opacity-0 transition-opacity duration-1000 rounded-xl ${
+          alt={`Conteúdo do produto ${index + 1}`}
+          className={`forgotten-slide w-full h-auto block absolute top-0 left-0 opacity-0 transition-opacity duration-1000 rounded-xl ${
             index === currentIndex ? 'opacity-100 relative' : ''
           }`}
         />
@@ -52,4 +52,4 @@ const TestimonialSlideshow = () => {
   );
 };
 
-export default TestimonialSlideshow;
+export default ProductShowcase;

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import TestimonialSlideshow from './TestimonialSlideshow';
+import ProductShowcase from './ProductShowcase';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -66,6 +67,20 @@ const TestimonialsSection = () => {
           className="mb-16"
         >
           <TestimonialSlideshow />
+        </motion.div>
+
+        {/* Product Showcase */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h3 className="text-3xl md:text-4xl font-typewriter text-evidence-gold text-center mb-8">
+            Veja por dentro do caso Red Ridge:
+          </h3>
+          <ProductShowcase />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
