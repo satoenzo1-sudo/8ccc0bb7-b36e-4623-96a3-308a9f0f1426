@@ -1,3 +1,4 @@
+import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import CaseHistorySection from '@/components/CaseHistorySection';
 import HowItWorksSection from '@/components/HowItWorksSection';
@@ -9,6 +10,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-case-file-bg to-background">
+      <Header />
       <HeroSection />
       <CaseHistorySection />
       <HowItWorksSection />

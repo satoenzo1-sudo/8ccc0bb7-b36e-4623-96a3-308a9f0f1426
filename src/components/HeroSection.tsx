@@ -3,7 +3,7 @@ import { FileX, Zap, Download } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden vhs-noise">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden vhs-noise pt-20">
       {/* Background VHS Static Effect */}
       <div className="absolute inset-0 vhs-scanlines opacity-40"></div>
       
@@ -102,7 +102,7 @@ const HeroSection = () => {
               className="flex flex-col items-center"
             >
               <Zap className="w-8 h-8 text-vhs-red mb-3" />
-              <p className="font-mono text-aged-paper">1 a 2 horas de jogabilidade</p>
+              <p className="font-mono text-aged-paper">Dificuldade: Médio para Difícil</p>
             </motion.div>
             
             <motion.div 
@@ -132,9 +132,7 @@ const HeroSection = () => {
           whileTap={{ scale: 0.95 }}
           className="btn-investigation px-12 py-4 text-xl font-bold rounded-lg"
           onClick={() => {
-            document.getElementById('pricing')?.scrollIntoView({ 
-              behavior: 'smooth' 
-            });
+            window.open('https://pay.kiwify.com.br/0Ja4ags', '_blank');
           }}
         >
           QUERO INVESTIGAR AGORA

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import TestimonialSlideshow from './TestimonialSlideshow';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -54,6 +55,17 @@ const TestimonialsSection = () => {
           >
             DEPOIMENTOS VERIFICADOS
           </motion.div>
+        </motion.div>
+
+        {/* Slideshow de Depoimentos */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <TestimonialSlideshow />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -145,9 +157,7 @@ const TestimonialsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-investigation px-8 py-3 text-lg rounded-lg"
                 onClick={() => {
-                  document.getElementById('pricing')?.scrollIntoView({ 
-                    behavior: 'smooth' 
-                  });
+                  window.open('https://pay.kiwify.com.br/0Ja4ags', '_blank');
                 }}
               >
                 INVESTIGAR AGORA

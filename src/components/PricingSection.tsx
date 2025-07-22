@@ -35,6 +35,21 @@ const PricingSection = () => {
               ACESSO LIBERADO
             </motion.div>
 
+            {/* Product Cover */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <img 
+                src="/lovable-uploads/8970d588-9b1d-4841-8e17-b61893bf84c3.png" 
+                alt="Red Ridge Case Cover" 
+                className="w-full max-w-md mx-auto rounded-lg"
+              />
+            </motion.div>
+
             {/* Title */}
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
@@ -96,6 +111,9 @@ const PricingSection = () => {
               }}
               whileTap={{ scale: 0.95 }}
               className="btn-investigation px-12 py-4 text-xl font-bold rounded-lg w-full md:w-auto relative overflow-hidden"
+              onClick={() => {
+                window.open('https://pay.kiwify.com.br/0Ja4ags', '_blank');
+              }}
             >
               <motion.span
                 className="relative z-10"
