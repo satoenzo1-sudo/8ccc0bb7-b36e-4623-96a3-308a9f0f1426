@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// VHS Investigation Theme Colors
+				'vhs-red': 'hsl(var(--vhs-red))',
+				'evidence-gold': 'hsl(var(--evidence-gold))',
+				'aged-paper': 'hsl(var(--aged-paper))',
+				'carbon-black': 'hsl(var(--carbon-black))',
+				'case-file-bg': 'hsl(var(--case-file-bg))',
+				'confidential-stamp': 'hsl(var(--confidential-stamp))'
+			},
+			fontFamily: {
+				typewriter: ['Special Elite', 'monospace'],
+				mono: ['Roboto Mono', 'monospace'],
+				'serif-italic': ['Cormorant Garamond', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
