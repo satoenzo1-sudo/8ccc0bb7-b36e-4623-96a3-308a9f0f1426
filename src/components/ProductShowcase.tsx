@@ -8,40 +8,37 @@ const ZoomGrid = () => {
     '/lovable-uploads/zoomslide4.png',
   ];
 
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleClick = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <div
       style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        columnGap: 12, // espaço lateral entre colunas
-        rowGap: 32, // espaço vertical entre linhas
-        padding: 40,
-        justifyItems: 'center',
-        alignItems: 'center',
-        overflow: 'visible',
-        width: '100%',
+        display: 'flex',
+        gap: 16, // Espaçamento entre imagens
+        padding: 20,
+        overflowX: 'auto', // Scroll horizontal
+        scrollbarWidth: 'none', // Remove scrollbar no Firefox
+        msOverflowStyle: 'none', // Remove scrollbar no IE
       }}
+      className="hide-scrollbar" // Para esconder no Chrome com CSS extra
     >
       {slides.map((src, i) => (
         <div
           key={i}
           style={{
-            width: 280,
-            height: 360,
+            flex: '0 0 auto', // Impede quebra de linha
+            width: 200,
+            height: 260,
             borderRadius: 12,
-            overflow: 'visible',
+            overflow: 'hidden',
             position: 'relative',
-            transition: 'transform 0.3s ease',
-            zIndex: hoveredIndex === i ? 10 : 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
             cursor: 'pointer',
           }}
-          onMouseEnter={() => setHoveredIndex(i)}
-          onMouseLeave={() => setHoveredIndex(null)}
+          onClick={() => handleClick(i)}
         >
           <img
             src={src}
@@ -52,11 +49,7 @@ const ZoomGrid = () => {
               objectFit: 'cover',
               borderRadius: 12,
               transition: 'transform 0.3s ease',
-              transform: hoveredIndex === i ? 'scale(1.25)' : 'scale(1)',
-              pointerEvents: 'none',
-              userSelect: 'none',
-              position: 'relative',
-              zIndex: hoveredIndex === i ? 10 : 1,
+              transform: activeIndex === i ? 'scale(1.25)' : 'scale(1)',
             }}
             draggable={false}
           />
