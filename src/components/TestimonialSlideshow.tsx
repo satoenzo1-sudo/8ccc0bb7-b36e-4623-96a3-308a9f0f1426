@@ -1,9 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-
-const TestimonialSlideshow = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  
+const HorizontalScrollZoom = () => {
   const slides = [
     '/lovable-uploads/541e2071-31fc-4a94-b096-95b7fb52fa36.png',
     '/lovable-uploads/23cda1bf-36d2-43aa-8cac-757bfa7f62d1.png',
@@ -11,45 +6,24 @@ const TestimonialSlideshow = () => {
     '/lovable-uploads/d6b87898-f620-451c-b333-1d28bbb9fea3.png'
   ];
 
-  const showNextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const startInterval = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(showNextSlide, 8000);
-  };
-
-  const stopInterval = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
-
-  useEffect(() => {
-    startInterval();
-    return () => stopInterval();
-  }, []);
-
   return (
-    <div 
-      className="testimonial-carousel relative w-full max-w-[600px] mx-auto my-10 rounded-xl overflow-hidden shadow-lg"
-      onMouseEnter={stopInterval}
-      onMouseLeave={startInterval}
-    >
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide}
-          alt={`Depoimento ${index + 1}`}
-          className={`testimonial w-full h-auto block absolute top-0 left-0 opacity-0 transition-opacity duration-1000 rounded-xl ${
-            index === currentIndex ? 'opacity-100 relative' : ''
-          }`}
-        />
-      ))}
+    <div className="w-full overflow-x-auto py-6">
+      <div className="flex gap-4 px-4 w-max">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="min-w-[300px] max-w-[300px] overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+          >
+            <img
+              src={slide}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default TestimonialSlideshow;
+export default HorizontalScrollZoom;

@@ -1,55 +1,69 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 
-const ProductShowcase = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  
+const ZoomGrid = () => {
   const slides = [
-    '/lovable-uploads/00b09188-d93f-4500-83b1-d88a6fc7bfed.png',
-    '/lovable-uploads/33436acd-c481-42bd-b437-e48cf4a29f7a.png',
-    '/lovable-uploads/1bfb3859-4012-406f-b929-5eb0bb468af4.png',
-    '/lovable-uploads/846bbf1d-4306-4374-b3de-f325701f7a4a.png'
+    '/lovable-uploads/zoomslide1.png',
+    '/lovable-uploads/zoomslide2.png',
+    '/lovable-uploads/zoomslide3.png',
+    '/lovable-uploads/zoomslide4.png',
   ];
 
-  const showNextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const startInterval = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(showNextSlide, 8000);
-  };
-
-  const stopInterval = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
-
-  useEffect(() => {
-    startInterval();
-    return () => stopInterval();
-  }, []);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div 
-      className="forgotten-carousel relative w-full max-w-[600px] mx-auto my-10 rounded-xl overflow-hidden shadow-lg"
-      onMouseEnter={stopInterval}
-      onMouseLeave={startInterval}
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        columnGap: 12, // espaço lateral entre colunas
+        rowGap: 32, // espaço vertical entre linhas
+        padding: 40,
+        justifyItems: 'center',
+        alignItems: 'center',
+        overflow: 'visible',
+        width: '100%',
+      }}
     >
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide}
-          alt={`Conteúdo do produto ${index + 1}`}
-          className={`forgotten-slide w-full h-auto block absolute top-0 left-0 opacity-0 transition-opacity duration-1000 rounded-xl ${
-            index === currentIndex ? 'opacity-100 relative' : ''
-          }`}
-        />
+      {slides.map((src, i) => (
+        <div
+          key={i}
+          style={{
+            width: 280,
+            height: 360,
+            borderRadius: 12,
+            overflow: 'visible',
+            position: 'relative',
+            transition: 'transform 0.3s ease',
+            zIndex: hoveredIndex === i ? 10 : 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            cursor: 'pointer',
+          }}
+          onMouseEnter={() => setHoveredIndex(i)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <img
+            src={src}
+            alt={`Slide ${i + 1}`}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              borderRadius: 12,
+              transition: 'transform 0.3s ease',
+              transform: hoveredIndex === i ? 'scale(1.25)' : 'scale(1)',
+              pointerEvents: 'none',
+              userSelect: 'none',
+              position: 'relative',
+              zIndex: hoveredIndex === i ? 10 : 1,
+            }}
+            draggable={false}
+          />
+        </div>
       ))}
     </div>
   );
 };
 
-export default ProductShowcase;
+export default ZoomGrid;
