@@ -70,10 +70,13 @@ const PricingSection = () => {
               className="mb-8"
             >
               <div className="text-6xl md:text-7xl font-typewriter text-evidence-gold font-bold mb-2">
-                R$ 37,90
+                R$ 27,90
               </div>
-              <p className="font-mono text-aged-paper text-lg">
-                Acesso imediato ao arquivo digital
+              <p className="font-mono text-aged-paper text-lg mb-2">
+                <span className="line-through text-muted-foreground">R$ 97,00</span> • Desconto de 71%
+              </p>
+              <p className="font-mono text-vhs-red text-xl font-bold">
+                MENOS QUE UM LANCHE! Acesso vitalício por centavos
               </p>
             </motion.div>
 
