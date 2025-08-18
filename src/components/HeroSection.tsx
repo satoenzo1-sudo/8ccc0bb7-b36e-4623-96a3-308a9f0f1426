@@ -132,7 +132,10 @@ const HeroSection = () => {
           whileTap={{ scale: 0.95 }}
           className="btn-investigation px-12 py-4 text-xl font-bold rounded-lg"
           onClick={() => {
-            window.open('https://pay.kiwify.com.br/0Ja4ags', '_blank');
+            const pricingSection = document.getElementById('pricing');
+            if (pricingSection) {
+              pricingSection.scrollIntoView({ behavior: 'smooth' });
+            }
           }}
         >
           QUERO INVESTIGAR AGORA

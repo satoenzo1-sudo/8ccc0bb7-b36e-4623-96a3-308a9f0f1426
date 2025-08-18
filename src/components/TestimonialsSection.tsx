@@ -172,7 +172,10 @@ const TestimonialsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-investigation px-8 py-3 text-lg rounded-lg"
                 onClick={() => {
-                  window.open('https://pay.kiwify.com.br/0Ja4ags', '_blank');
+                  const pricingSection = document.getElementById('pricing');
+                  if (pricingSection) {
+                    pricingSection.scrollIntoView({ behavior: 'smooth' });
+                  }
                 }}
               >
                 INVESTIGAR AGORA

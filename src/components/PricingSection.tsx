@@ -76,7 +76,7 @@ const PricingSection = () => {
                 <span className="line-through text-muted-foreground">R$ 97,00</span> • Desconto de 71%
               </p>
               <p className="font-mono text-vhs-red text-xl font-bold">
-                MENOS QUE UM LANCHE! Acesso vitalício por centavos
+                MENOS QUE UM LANCHE! Resolva o mistério que intriga milhões
               </p>
             </motion.div>
 
