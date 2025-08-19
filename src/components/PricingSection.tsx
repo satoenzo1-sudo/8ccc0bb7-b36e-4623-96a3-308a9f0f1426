@@ -69,6 +69,9 @@ const PricingSection = () => {
               viewport={{ once: true }}
               className="mb-8"
             >
+              <p className="font-mono text-aged-paper text-xl mb-3">
+                Tudo isso por apenas
+              </p>
               <div className="text-6xl md:text-7xl font-typewriter text-evidence-gold font-bold mb-2">
                 R$ 27,90
               </div>
@@ -76,7 +79,7 @@ const PricingSection = () => {
                 <span className="line-through text-muted-foreground">R$ 97,00</span> • Desconto de 71%
               </p>
               <p className="font-mono text-vhs-red text-xl font-bold">
-                MENOS QUE UM LANCHE! Resolva o mistério que intriga milhões
+                Resolva o mistério que intriga milhões
               </p>
             </motion.div>
 
