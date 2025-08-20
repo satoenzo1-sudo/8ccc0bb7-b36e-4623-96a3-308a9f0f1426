@@ -6,27 +6,27 @@ import ProductShowcase from './ProductShowcase';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Maria S.",
-      quote: "Passei 3 horas analisando cada pista. Quando descobri a verdade, fiquei arrepiada.",
-      role: "Detetive Amadora",
+      name: "Ana P.",
+      quote: "Me senti dentro de um filme de terror dos anos 80. Imersivo demais!",
+      role: "Investigadora",
       delay: 0.1
     },
     {
-      name: "Carlos R.",
-      quote: "O nível de detalhamento é impressionante. Parece que você está realmente investigando um caso real.",
-      role: "True Crime Fan",
+      name: "Lucas & Carol",
+      quote: "Passei a madrugada inteira tentando resolver com meu namorado.",
+      role: "Casal de Detetives",
       delay: 0.3
     },
     {
-      name: "Ana P.",
-      quote: "Minha teoria estava completamente errada! O final me pegou de surpresa.",
-      role: "Investigadora",
+      name: "Felipe R.",
+      quote: "Nunca vi nada tão realista, parecia uma investigação de verdade.",
+      role: "True Crime Fan",
       delay: 0.5
     },
     {
-      name: "Pedro L.",
-      quote: "Finalmente um mistério que te faz pensar de verdade. Muito melhor que qualquer série.",
-      role: "Analista",
+      name: "Mariana S.",
+      quote: "Consegui resolver o caso, mas não foi nada fácil. Recomendo!",
+      role: "Detetive Amadora",
       delay: 0.7
     }
   ];

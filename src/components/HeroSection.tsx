@@ -50,20 +50,11 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl font-typewriter font-bold text-aged-paper mb-4">
             <span 
               className="glitch block text-vhs-red" 
-              data-text="The Forgotten VHS"
+              data-text="Você conseguiria resolver o caso criminal mais realista e imersivo do TikTok?"
             >
-              The Forgotten VHS
+              Você conseguiria resolver o caso criminal mais realista e imersivo do TikTok?
             </span>
           </h1>
-          
-          <motion.h2 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-2xl md:text-4xl font-typewriter text-evidence-gold mb-2"
-          >
-            Caso Red Ridge
-          </motion.h2>
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
@@ -82,7 +73,7 @@ const HeroSection = () => {
           transition={{ delay: 1, duration: 0.8 }}
           className="text-xl md:text-2xl font-serif-italic text-aged-paper max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          "Entre no arquivo proibido. Resolva o mistério que a polícia tentou enterrar entre 1982 e 1985."
+          Descubra os segredos escondidos na fita VHS 13 e viva a experiência de um verdadeiro detetive.
         </motion.p>
 
         {/* Quick Highlight Section */}
@@ -138,7 +129,7 @@ const HeroSection = () => {
             }
           }}
         >
-          QUERO INVESTIGAR AGORA
+          👉 Entrar no Caso Agora
         </motion.button>
       </div>
 

@@ -5,26 +5,26 @@ const HowItWorksSection = () => {
   const steps = [
     {
       icon: Download,
-      title: "Baixe ou imprima o PDF completo",
-      description: "39 páginas de evidências autênticas",
+      title: "Receba os arquivos secretos no seu e-mail.",
+      description: "Download instantâneo após a compra",
       delay: 0.2
     },
     {
       icon: Search,
-      title: "Analise evidências reais",
-      description: "laudos, autópsias, transcrições, fotos e mapas",
+      title: "Explore relatórios, laudos e documentos antigos.",
+      description: "Analise cada evidência com cuidado",
       delay: 0.4
     },
     {
       icon: Puzzle,
-      title: "Compare pistas e construa sua teoria",
-      description: "Monte o quebra-cabeças criminal",
+      title: "Conecte pistas e descubra novos segredos.",
+      description: "Monte sua teoria sobre o caso",
       delay: 0.6
     },
     {
       icon: Eye,
-      title: "Descubra quem matou — e por quê",
-      description: "Resolva o mistério de Red Ridge",
+      title: "Tente resolver o caso antes que seja tarde.",
+      description: "Descubra a verdade sobre Red Ridge",
       delay: 0.8
     }
   ];
@@ -44,6 +44,10 @@ const HowItWorksSection = () => {
           <h2 className="text-4xl md:text-6xl font-typewriter text-evidence-gold mb-4">
             Como funciona a investigação?
           </h2>
+          <p className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed max-w-3xl mx-auto">
+            Você recebe todos os arquivos digitais imediatamente após a compra.
+            Cada pista, cada documento e cada detalhe vai aproximar (ou afastar) você da solução.
+          </p>
           <div className="w-32 h-1 bg-vhs-red mx-auto"></div>
         </motion.div>
 

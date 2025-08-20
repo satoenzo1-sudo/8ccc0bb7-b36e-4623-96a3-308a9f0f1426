@@ -15,8 +15,8 @@ const CaseHistorySection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-typewriter text-vhs-red mb-8">
-            <span className="glitch" data-text="O que esconde o VHS 13?">
-              O que esconde o VHS 13?
+            <span className="glitch" data-text="O que esconde o Caso Red Ridge VHS 13?">
+              O que esconde o Caso Red Ridge VHS 13?
             </span>
           </h2>
         </motion.div>
@@ -68,15 +68,8 @@ const CaseHistorySection = () => {
               viewport={{ once: true }}
               className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed"
             >
-              Entre <span className="text-vhs-red font-bold">1982 e 1985</span>, sete mulheres foram brutalmente assassinadas em 
-              <span className="text-evidence-gold font-bold"> Red Ridge</span>. Um suspeito foi preso — e morreu pouco depois. 
-              Mas uma nova vítima apareceu. O caso foi 
-              <span 
-                className="text-vhs-red font-bold glitch cursor-pointer" 
-                data-text="enterrado"
-              > 
-                enterrado
-              </span>.
+              Há mais de 40 anos, um caso não resolvido foi trancado em arquivos confidenciais e esquecido pelo tempo.
+              Agora, você pode acessar esses documentos secretos e tentar resolver aquilo que nem os investigadores originais conseguiram.
             </motion.p>
 
             <motion.div 
@@ -94,14 +87,8 @@ const CaseHistorySection = () => {
               viewport={{ once: true }}
               className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed"
             >
-              Décadas depois, um arquivo secreto rotulado como 
-              <span 
-                className="text-vhs-red font-bold px-2 py-1 border border-vhs-red mx-2 glitch" 
-                data-text="VHS 13"
-              >
-                'VHS 13'
-              </span> 
-              reaparece, trazendo documentos não protocolados, fotos, transcrições e laudos omitidos pela polícia.
+              Dentro deste arquivo secreto existe um mistério que ficou escondido por décadas.
+              Relatos policiais, laudos forenses, autópsias, documentos confidenciais e muito mais revelam um enigma que você precisa desvendar.
             </motion.p>
 
             <motion.div 
@@ -111,9 +98,19 @@ const CaseHistorySection = () => {
               viewport={{ once: true }}
               className="mt-8"
             >
-              <p className="text-2xl md:text-3xl font-serif-italic text-evidence-gold">
-                Agora é você quem investiga.
-              </p>
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-investigation px-8 py-3 text-lg rounded-lg"
+                onClick={() => {
+                  const pricingSection = document.getElementById('pricing');
+                  if (pricingSection) {
+                    pricingSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                👉 Liberar meu VHS 13
+              </motion.button>
             </motion.div>
 
             {/* VHS Effect Lines */}

@@ -76,10 +76,10 @@ const PricingSection = () => {
                 R$ 27,90
               </div>
               <p className="font-mono text-aged-paper text-lg mb-2">
-                <span className="line-through text-muted-foreground">R$ 97,00</span> • Desconto de 71%
+                <span className="line-through text-muted-foreground">De R$ 59,90</span> 
               </p>
               <p className="font-mono text-vhs-red text-xl font-bold">
-                Resolva o mistério que intriga milhões
+                Menos que o preço de uma pizza para viver uma noite inteira de investigação e mistério.
               </p>
             </motion.div>
 
@@ -126,7 +126,7 @@ const PricingSection = () => {
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                ACESSAR O CASO AGORA
+                👉 Quero Investigar Hoje
               </motion.span>
               
               {/* Button glow effect */}

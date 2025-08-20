@@ -5,39 +5,33 @@ const IncludedSection = () => {
   const items = [
     {
       icon: FileText,
-      title: "Arquivo completo em PDF",
-      description: "39 páginas de investigação detalhada",
+      title: "📼 Arquivo secreto em estilo policial",
+      description: "com páginas manchadas e relatos escondidos.",
       delay: 0.1
     },
     {
       icon: Microscope,
-      title: "Laudos forenses reais",
-      description: "Análises científicas autênticas do caso",
+      title: "🩸 Laudos forenses digitalizados",
+      description: "como se tivessem saído de uma investigação real.",
       delay: 0.2
     },
     {
       icon: MessageSquare,
-      title: "Entrevistas e transcrições policiais",
-      description: "Depoimentos originais dos envolvidos",
+      title: "🕵️‍♂️ Relatórios confidenciais dos detetives",
+      description: "que falharam antes de você.",
       delay: 0.3
     },
     {
-      icon: FileText,
-      title: "Fragmentos de anotações ocultas",
-      description: "Documentos que nunca vieram à tona",
+      icon: Camera,
+      title: "📷 Fotografias reveladas e documentos escaneados",
+      description: "direto dos anos 70.",
       delay: 0.4
     },
     {
       icon: MapPin,
-      title: "Mapas do condado + evidências visuais",
-      description: "Localização precisa dos crimes",
+      title: "🔍 Pistas e enigmas ocultos",
+      description: "para você e seu parceiro(a) desvendar.",
       delay: 0.5
-    },
-    {
-      icon: Smartphone,
-      title: "Produto digital",
-      description: "Para imprimir ou jogar direto no celular/notebook",
-      delay: 0.6
     }
   ];
 

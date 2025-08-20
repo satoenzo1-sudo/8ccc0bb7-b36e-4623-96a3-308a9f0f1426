@@ -20,10 +20,10 @@ const Footer = () => {
             transition={{ duration: 0.3 }}
           >
             <h3 className="text-2xl font-typewriter text-vhs-red font-bold mb-2">
-              The Forgotten VHS
+              The Forgotten VHS – Caso Red Ridge
             </h3>
             <p className="font-mono text-muted-foreground text-sm">
-              Caso Red Ridge • VHS 13
+              📼 O arquivo que nunca deveria ter sido encontrado.
             </p>
           </motion.div>
 
