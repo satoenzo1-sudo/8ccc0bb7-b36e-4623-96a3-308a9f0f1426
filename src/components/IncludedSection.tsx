@@ -156,11 +156,23 @@ const IncludedSection = () => {
 
         {/* Video Section */}
         <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center"
+        >
+          <h3 className="text-2xl md:text-3xl font-typewriter text-evidence-gold mb-8 px-4">
+            Assista ao depoimento abaixo de quem já adquiriu o Caso Red Ridge - VHS 13 ↓
+          </h3>
+        </motion.div>
+
+        <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           viewport={{ once: true }}
-          className="mt-16 max-w-md mx-auto"
+          className="max-w-md mx-auto"
         >
           <div 
             className="relative overflow-hidden rounded-2xl shadow-lg"
