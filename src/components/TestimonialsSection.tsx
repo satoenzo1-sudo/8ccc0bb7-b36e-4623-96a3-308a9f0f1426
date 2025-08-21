@@ -36,6 +36,28 @@ const TestimonialsSection = () => {
       <div className="absolute inset-0 vhs-noise opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
+        {/* Social movement trigger before testimonials */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <motion.div 
+            className="inline-block bg-evidence-gold/10 border border-evidence-gold px-8 py-4 rounded-lg"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <p className="font-mono text-evidence-gold font-bold text-lg">
+              📈 MOVIMENTO CRESCENTE
+            </p>
+            <p className="font-mono text-aged-paper text-sm mt-2">
+              +127 novos investigadores entraram no caso apenas hoje
+            </p>
+          </motion.div>
+        </motion.div>
+
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

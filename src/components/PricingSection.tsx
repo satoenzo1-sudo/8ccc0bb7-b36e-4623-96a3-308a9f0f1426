@@ -6,6 +6,33 @@ const PricingSection = () => {
     <section id="pricing" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 vhs-noise opacity-20"></div>
       
+      {/* Price urgency trigger above pricing section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="container mx-auto px-4 relative z-10 mb-12"
+      >
+        <div className="text-center">
+          <motion.div 
+            className="inline-block bg-vhs-red/20 border-2 border-vhs-red px-8 py-4 rounded-lg"
+            animate={{ 
+              scale: [1, 1.02, 1],
+              borderColor: ['hsl(var(--vhs-red))', 'hsl(var(--evidence-gold))', 'hsl(var(--vhs-red))']
+            }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <p className="font-mono text-vhs-red font-bold text-xl">
+              🚨 ÚLTIMAS HORAS DA PROMOÇÃO
+            </p>
+            <p className="font-mono text-aged-paper text-lg mt-2">
+              Preço volta para R$ 59,90 em breve. Não perca esta oportunidade!
+            </p>
+          </motion.div>
+        </div>
+      </motion.div>
+      
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Pricing Card */}
         <motion.div 
@@ -103,6 +130,26 @@ const PricingSection = () => {
                 <ShieldCheck className="w-6 h-6 text-vhs-red" />
                 <span className="font-mono text-aged-paper">7 dias de garantia</span>
               </div>
+            </motion.div>
+
+            {/* Last chance trigger in CTA */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-6 text-center"
+            >
+              <motion.p 
+                className="font-mono text-evidence-gold font-bold text-lg"
+                animate={{ opacity: [1, 0.7, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                ⏰ ÚLTIMA CHANCE - NÃO SAIA SEM INVESTIGAR
+              </motion.p>
+              <p className="font-mono text-aged-paper text-sm mt-2">
+                Esta página pode não estar disponível amanhã
+              </p>
             </motion.div>
 
             {/* Urgency Alert */}

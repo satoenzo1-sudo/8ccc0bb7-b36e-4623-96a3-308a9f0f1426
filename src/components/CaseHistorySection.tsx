@@ -97,11 +97,27 @@ const CaseHistorySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: true }}
-              className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed"
+              className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed mb-6"
             >
               Dentro deste arquivo secreto existe um mistério que ficou escondido por décadas.
               Relatos policiais, laudos forenses, autópsias, documentos confidenciais e muito mais revelam um enigma que você precisa desvendar.
             </motion.p>
+
+            {/* Challenge/Competition trigger */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              viewport={{ once: true }}
+              className="bg-evidence-gold/10 border-l-4 border-evidence-gold px-6 py-4 rounded-r-lg mb-6"
+            >
+              <p className="font-mono text-evidence-gold font-bold text-lg">
+                🏆 DESAFIO ACEITO?
+              </p>
+              <p className="font-mono text-aged-paper text-sm mt-2">
+                Apenas 23% dos investigadores conseguem resolver este caso. Você tem o que é preciso?
+              </p>
+            </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}

@@ -51,6 +51,22 @@ const IncludedSection = () => {
             O que está incluso:
           </h2>
           
+          {/* Limited access trigger */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-8 bg-vhs-red/10 border border-vhs-red px-6 py-4 rounded-lg max-w-md mx-auto"
+          >
+            <p className="font-mono text-vhs-red font-bold text-lg">
+              🔒 ARQUIVOS CONFIDENCIAIS
+            </p>
+            <p className="font-mono text-aged-paper text-sm mt-2">
+              Acesso limitado a apenas 500 investigadores por mês
+            </p>
+          </motion.div>
+          
           {/* Evidence label */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}

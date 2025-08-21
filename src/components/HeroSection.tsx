@@ -83,10 +83,33 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="text-xl md:text-2xl font-serif-italic text-aged-paper max-w-4xl mx-auto mb-12 leading-relaxed"
+          className="text-xl md:text-2xl font-serif-italic text-aged-paper max-w-4xl mx-auto mb-8 leading-relaxed"
         >
           Descubra os segredos escondidos na fita VHS 13 e viva a experiência de um verdadeiro detetive.
         </motion.p>
+
+        {/* Urgency trigger after headline */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.2, duration: 0.6 }}
+          className="mb-12"
+        >
+          <motion.div 
+            className="inline-block border border-vhs-red bg-vhs-red/10 px-6 py-3 rounded-lg"
+            animate={{ 
+              borderColor: ['hsl(var(--vhs-red))', 'hsl(var(--evidence-gold))', 'hsl(var(--vhs-red))']
+            }}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            <p className="font-mono text-vhs-red font-bold text-lg">
+              ⚠️ ACESSO LIBERADO POR TEMPO LIMITADO
+            </p>
+            <p className="font-mono text-aged-paper text-sm mt-1">
+              Promoção válida apenas nas próximas 24 horas
+            </p>
+          </motion.div>
+        </motion.div>
 
         {/* Quick Highlight Section */}
         <motion.div 
