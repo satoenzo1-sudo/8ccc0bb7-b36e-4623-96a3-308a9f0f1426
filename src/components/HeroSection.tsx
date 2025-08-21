@@ -40,11 +40,23 @@ const HeroSection = () => {
       </motion.div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
+        {/* Pre-title */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-6"
+        >
+          <p className="text-lg md:text-xl font-mono text-evidence-gold tracking-widest">
+            THE FORGOTTEN VHS
+          </p>
+        </motion.div>
+
         {/* Main Title with Glitch Effect */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="mb-8"
         >
           <h1 className="text-5xl md:text-7xl font-typewriter font-bold text-aged-paper mb-4">
@@ -119,9 +131,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ 
+            scale: 1.05,
+            boxShadow: "0 0 30px hsl(var(--vhs-red) / 0.6), 0 0 60px hsl(var(--vhs-red) / 0.3)",
+            textShadow: "0 0 10px hsl(var(--vhs-red) / 0.8)"
+          }}
           whileTap={{ scale: 0.95 }}
-          className="btn-investigation px-12 py-4 text-xl font-bold rounded-lg"
+          className="btn-investigation px-12 py-4 text-xl font-bold rounded-lg relative overflow-hidden"
           onClick={() => {
             const pricingSection = document.getElementById('pricing');
             if (pricingSection) {
@@ -129,7 +145,12 @@ const HeroSection = () => {
             }
           }}
         >
-          👉 Entrar no Caso Agora
+          <motion.div
+            className="absolute inset-0 vhs-scanlines opacity-0"
+            whileHover={{ opacity: 0.3 }}
+            transition={{ duration: 0.3 }}
+          />
+          <span className="relative z-10">👉 Entrar no Caso Agora</span>
         </motion.button>
       </div>
 

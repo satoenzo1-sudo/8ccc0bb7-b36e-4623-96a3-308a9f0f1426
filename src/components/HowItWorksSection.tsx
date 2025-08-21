@@ -44,10 +44,21 @@ const HowItWorksSection = () => {
           <h2 className="text-4xl md:text-6xl font-typewriter text-evidence-gold mb-4">
             Como funciona a investigação?
           </h2>
-          <p className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl font-mono text-aged-paper leading-relaxed max-w-3xl mx-auto mb-6">
             Você recebe todos os arquivos digitais imediatamente após a compra.
             Cada pista, cada documento e cada detalhe vai aproximar (ou afastar) você da solução.
           </p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="inline-block bg-evidence-gold/10 border border-evidence-gold px-6 py-3 rounded-lg mb-4"
+          >
+            <p className="font-mono text-evidence-gold text-lg font-bold">
+              ⏰ Entrega em menos de 2 minutos
+            </p>
+          </motion.div>
           <div className="w-32 h-1 bg-vhs-red mx-auto"></div>
         </motion.div>
 
@@ -112,16 +123,25 @@ const HowItWorksSection = () => {
               "Cada pista te leva mais fundo no mistério..."
             </p>
             <motion.button 
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 25px hsl(var(--vhs-red) / 0.5)",
+                textShadow: "0 0 8px hsl(var(--vhs-red) / 0.7)"
+              }}
               whileTap={{ scale: 0.95 }}
-              className="btn-investigation px-8 py-3 text-lg rounded-lg"
+              className="btn-investigation px-8 py-3 text-lg rounded-lg relative overflow-hidden"
               onClick={() => {
                 document.getElementById('pricing')?.scrollIntoView({ 
                   behavior: 'smooth' 
                 });
               }}
             >
-              COMEÇAR INVESTIGAÇÃO
+              <motion.div
+                className="absolute inset-0 vhs-scanlines opacity-0"
+                whileHover={{ opacity: 0.3 }}
+                transition={{ duration: 0.3 }}
+              />
+              <span className="relative z-10">COMEÇAR INVESTIGAÇÃO</span>
             </motion.button>
           </div>
         </motion.div>

@@ -48,6 +48,18 @@ const TestimonialsSection = () => {
           </h2>
           
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-4"
+          >
+            <p className="font-mono text-aged-paper text-lg">
+              ⭐ 2.834+ investigadores já resolveram o caso
+            </p>
+          </motion.div>
+          
+          <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}

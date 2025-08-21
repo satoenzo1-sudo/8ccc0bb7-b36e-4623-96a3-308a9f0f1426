@@ -105,6 +105,26 @@ const PricingSection = () => {
               </div>
             </motion.div>
 
+            {/* Urgency Alert */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="mb-6 bg-vhs-red/10 border-2 border-vhs-red rounded-lg p-4"
+            >
+              <motion.p 
+                className="font-mono text-vhs-red font-bold text-lg"
+                animate={{ opacity: [1, 0.7, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                🚨 ÚLTIMAS 24 HORAS COM DESCONTO!
+              </motion.p>
+              <p className="font-mono text-aged-paper text-sm mt-2">
+                Após esse período, o preço volta para R$ 59,90
+              </p>
+            </motion.div>
+
             {/* CTA Button */}
             <motion.button 
               initial={{ opacity: 0, y: 30 }}
@@ -113,7 +133,8 @@ const PricingSection = () => {
               viewport={{ once: true }}
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: "0 0 40px hsl(var(--vhs-red) / 0.8)"
+                boxShadow: "0 0 40px hsl(var(--vhs-red) / 0.8), 0 0 80px hsl(var(--vhs-red) / 0.4)",
+                textShadow: "0 0 15px hsl(var(--vhs-red) / 1)"
               }}
               whileTap={{ scale: 0.95 }}
               className="btn-investigation px-12 py-4 text-xl font-bold rounded-lg w-full md:w-auto relative overflow-hidden"
@@ -121,6 +142,16 @@ const PricingSection = () => {
                 window.open('https://pay.kiwify.com.br/0Ja4ags', '_blank');
               }}
             >
+              <motion.div
+                className="absolute inset-0 vhs-scanlines opacity-0"
+                whileHover={{ opacity: 0.4 }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-vhs-red/20 to-transparent"
+                animate={{ x: ['-100%', '100%'] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              />
               <motion.span
                 className="relative z-10"
                 whileHover={{ y: -2 }}
@@ -128,13 +159,6 @@ const PricingSection = () => {
               >
                 👉 Quero Investigar Hoje
               </motion.span>
-              
-              {/* Button glow effect */}
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-vhs-red via-red-500 to-vhs-red opacity-0"
-                whileHover={{ opacity: 0.2 }}
-                transition={{ duration: 0.3 }}
-              />
             </motion.button>
 
             {/* Security note */}
@@ -181,7 +205,7 @@ const PricingSection = () => {
           </div>
         </motion.div>
 
-        {/* Urgency indicator */}
+        {/* Enhanced urgency indicator */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -190,16 +214,30 @@ const PricingSection = () => {
           className="text-center mt-12"
         >
           <motion.div 
-            className="inline-block border-2 border-vhs-red px-6 py-3 rounded-lg"
+            className="inline-block border-2 border-vhs-red px-6 py-3 rounded-lg relative overflow-hidden"
             animate={{ 
               borderColor: ['hsl(var(--vhs-red))', 'hsl(var(--evidence-gold))', 'hsl(var(--vhs-red))']
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <p className="font-mono text-vhs-red font-bold">
-              ⚠️ ARQUIVO CONFIDENCIAL • ACESSO LIMITADO
+            <motion.div
+              className="absolute inset-0 bg-vhs-red/5"
+              animate={{ opacity: [0, 0.3, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+            <p className="font-mono text-vhs-red font-bold relative z-10">
+              ⚠️ ARQUIVO CONFIDENCIAL • APENAS 147 RESTANTES
             </p>
           </motion.div>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="font-mono text-muted-foreground text-sm mt-4"
+          >
+            Mais de 2.834 pessoas já investigaram este caso
+          </motion.p>
         </motion.div>
       </div>
     </section>
