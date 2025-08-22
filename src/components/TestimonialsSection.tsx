@@ -36,27 +36,6 @@ const TestimonialsSection = () => {
       <div className="absolute inset-0 vhs-noise opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Social movement trigger before testimonials */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <motion.div 
-            className="inline-block bg-evidence-gold/10 border border-evidence-gold px-8 py-4 rounded-lg"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
-          >
-            <p className="font-mono text-evidence-gold font-bold text-lg">
-              📈 MOVIMENTO CRESCENTE
-            </p>
-            <p className="font-mono text-aged-paper text-sm mt-2">
-              +127 novos investigadores entraram no caso apenas hoje
-            </p>
-          </motion.div>
-        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -181,42 +160,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Call to action */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="case-file rounded-lg p-8 max-w-2xl mx-auto relative">
-            {/* Background text */}
-            <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-              <div className="text-4xl md:text-6xl font-typewriter text-evidence-gold opacity-5 transform -rotate-12">
-                RESOLVIDO
-              </div>
-            </div>
-            
-            <div className="relative z-10">
-              <p className="text-xl font-serif-italic text-evidence-gold mb-6">
-                Seja o próximo a descobrir a verdade sobre Red Ridge
-              </p>
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-investigation px-8 py-3 text-lg rounded-lg"
-                onClick={() => {
-                  const pricingSection = document.getElementById('pricing');
-                  if (pricingSection) {
-                    pricingSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                INVESTIGAR AGORA
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

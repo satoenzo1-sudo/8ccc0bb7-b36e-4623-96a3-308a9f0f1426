@@ -110,41 +110,6 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="case-file rounded-lg p-8 max-w-2xl mx-auto">
-            <p className="text-xl font-serif-italic text-evidence-gold mb-6">
-              "Cada pista te leva mais fundo no mistério..."
-            </p>
-            <motion.button 
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 0 25px hsl(var(--vhs-red) / 0.5)",
-                textShadow: "0 0 8px hsl(var(--vhs-red) / 0.7)"
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-investigation px-8 py-3 text-lg rounded-lg relative overflow-hidden"
-              onClick={() => {
-                document.getElementById('pricing')?.scrollIntoView({ 
-                  behavior: 'smooth' 
-                });
-              }}
-            >
-              <motion.div
-                className="absolute inset-0 vhs-scanlines opacity-0"
-                whileHover={{ opacity: 0.3 }}
-                transition={{ duration: 0.3 }}
-              />
-              <span className="relative z-10">COMEÇAR INVESTIGAÇÃO</span>
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

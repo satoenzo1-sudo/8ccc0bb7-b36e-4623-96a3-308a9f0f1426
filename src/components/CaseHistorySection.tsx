@@ -70,17 +70,6 @@ const CaseHistorySection = () => {
               Agora, você pode acessar esses documentos secretos e tentar resolver aquilo que nem os investigadores originais conseguiram.
             </motion.p>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="my-6 inline-block border border-vhs-red px-4 py-2 rounded-lg"
-            >
-              <p className="font-mono text-vhs-red text-sm font-bold">
-                ⚠️ APENAS 147 ARQUIVOS RESTANTES
-              </p>
-            </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -117,36 +106,6 @@ const CaseHistorySection = () => {
               </p>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              viewport={{ once: true }}
-              className="mt-8"
-            >
-              <motion.button 
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 0 25px hsl(var(--vhs-red) / 0.5)",
-                  textShadow: "0 0 8px hsl(var(--vhs-red) / 0.7)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-investigation px-8 py-3 text-lg rounded-lg relative overflow-hidden"
-                onClick={() => {
-                  const pricingSection = document.getElementById('pricing');
-                  if (pricingSection) {
-                    pricingSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-vhs-red/10 to-transparent"
-                  animate={{ x: ['-100%', '100%'] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                />
-                <span className="relative z-10">👉 Liberar meu VHS 13</span>
-              </motion.button>
-            </motion.div>
 
             {/* VHS Effect Lines */}
             <div className="absolute inset-0 vhs-scanlines opacity-20 rounded-lg"></div>

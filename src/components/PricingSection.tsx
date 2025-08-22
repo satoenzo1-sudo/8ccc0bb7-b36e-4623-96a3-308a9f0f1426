@@ -132,45 +132,6 @@ const PricingSection = () => {
               </div>
             </motion.div>
 
-            {/* Last chance trigger in CTA */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-6 text-center"
-            >
-              <motion.p 
-                className="font-mono text-evidence-gold font-bold text-lg"
-                animate={{ opacity: [1, 0.7, 1] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                ⏰ ÚLTIMA CHANCE - NÃO SAIA SEM INVESTIGAR
-              </motion.p>
-              <p className="font-mono text-aged-paper text-sm mt-2">
-                Esta página pode não estar disponível amanhã
-              </p>
-            </motion.div>
-
-            {/* Urgency Alert */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              viewport={{ once: true }}
-              className="mb-6 bg-vhs-red/10 border-2 border-vhs-red rounded-lg p-4"
-            >
-              <motion.p 
-                className="font-mono text-vhs-red font-bold text-lg"
-                animate={{ opacity: [1, 0.7, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🚨 ÚLTIMAS 24 HORAS COM DESCONTO!
-              </motion.p>
-              <p className="font-mono text-aged-paper text-sm mt-2">
-                Após esse período, o preço volta para R$ 59,90
-              </p>
-            </motion.div>
 
             {/* CTA Button */}
             <motion.button 
@@ -252,40 +213,6 @@ const PricingSection = () => {
           </div>
         </motion.div>
 
-        {/* Enhanced urgency indicator */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <motion.div 
-            className="inline-block border-2 border-vhs-red px-6 py-3 rounded-lg relative overflow-hidden"
-            animate={{ 
-              borderColor: ['hsl(var(--vhs-red))', 'hsl(var(--evidence-gold))', 'hsl(var(--vhs-red))']
-            }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.div
-              className="absolute inset-0 bg-vhs-red/5"
-              animate={{ opacity: [0, 0.3, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <p className="font-mono text-vhs-red font-bold relative z-10">
-              ⚠️ ARQUIVO CONFIDENCIAL • APENAS 147 RESTANTES
-            </p>
-          </motion.div>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="font-mono text-muted-foreground text-sm mt-4"
-          >
-            Mais de 2.834 pessoas já investigaram este caso
-          </motion.p>
-        </motion.div>
       </div>
     </section>
   );
