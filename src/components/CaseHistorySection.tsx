@@ -15,9 +15,7 @@ const CaseHistorySection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-typewriter text-vhs-red mb-8">
-            <span className="glitch" data-text="O que esconde o Caso Red Ridge VHS 13?">
-              O que esconde o Caso Red Ridge VHS 13?
-            </span>
+            O que esconde o Caso Red Ridge VHS 13?
           </h2>
         </motion.div>
 

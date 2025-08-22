@@ -59,13 +59,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="mb-8"
         >
-          <h1 className="text-5xl md:text-7xl font-typewriter font-bold text-aged-paper mb-4">
-            <span 
-              className="glitch block text-vhs-red" 
-              data-text="Você conseguiria resolver o caso criminal mais realista e imersivo do TikTok?"
-            >
-              Você conseguiria resolver o caso criminal mais realista e imersivo do TikTok?
-            </span>
+          <h1 className="text-5xl md:text-7xl font-typewriter font-bold text-aged-paper mb-4 block text-vhs-red">
+            Você conseguiria resolver o caso criminal mais realista e imersivo do TikTok?
           </h1>
           
           <motion.div 
