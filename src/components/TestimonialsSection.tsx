@@ -56,7 +56,7 @@ const TestimonialsSection = () => {
             className="mb-4"
           >
             <p className="font-mono text-aged-paper text-lg">
-              ⭐ 2.834+ investigadores já resolveram o caso
+              ⭐ 584+ investigadores já resolveram o caso
             </p>
           </motion.div>
           
