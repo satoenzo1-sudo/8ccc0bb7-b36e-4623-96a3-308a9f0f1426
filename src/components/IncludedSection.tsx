@@ -139,39 +139,6 @@ const IncludedSection = () => {
           </div>
         </motion.div>
 
-        {/* Video Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <h3 className="text-2xl md:text-3xl font-typewriter text-evidence-gold mb-8 px-4">
-            Assista ao depoimento abaixo de quem já adquiriu o Caso Red Ridge - VHS 13 ↓
-          </h3>
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          viewport={{ once: true }}
-          className="max-w-md mx-auto"
-        >
-          <div 
-            className="relative overflow-hidden rounded-2xl shadow-lg"
-            style={{ paddingBottom: '177.78%', height: 0 }}
-          >
-            <iframe 
-              src="https://www.youtube.com/embed/FI7qlIjCgsM" 
-              title="Assista ao vídeo abaixo de quem já adiquiriu o Caso Red Ridge - VHS 13 ↓"
-              className="absolute top-0 left-0 w-full h-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

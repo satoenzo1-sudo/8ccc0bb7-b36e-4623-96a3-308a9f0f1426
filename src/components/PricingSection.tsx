@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Zap, Download } from 'lucide-react';
+import CountdownTimer from './CountdownTimer';
 
 const PricingSection = () => {
   return (
@@ -99,15 +100,36 @@ const PricingSection = () => {
               <p className="font-mono text-aged-paper text-xl mb-3">
                 Tudo isso por apenas
               </p>
-              <div className="text-6xl md:text-7xl font-typewriter text-evidence-gold font-bold mb-2">
-                R$ 27,90
+              
+              {/* Price anchoring */}
+              <div className="mb-4">
+                <div className="flex items-center justify-center space-x-4 mb-2">
+                  <span className="text-3xl font-typewriter text-vhs-red line-through">
+                    De R$ 57,00
+                  </span>
+                  <span className="text-2xl font-mono text-aged-paper">→</span>
+                  <span className="text-6xl md:text-7xl font-typewriter text-evidence-gold font-bold">
+                    R$ 27,90
+                  </span>
+                </div>
+                
+                <motion.div 
+                  className="inline-block bg-vhs-red/20 border border-vhs-red px-4 py-2 rounded-lg"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p className="font-mono text-vhs-red font-bold text-sm">
+                    (lançamento limitado)
+                  </p>
+                </motion.div>
               </div>
-              <p className="font-mono text-aged-paper text-lg mb-2">
-                <span className="line-through text-muted-foreground">De R$ 59,90</span> 
-              </p>
+              
               <p className="font-mono text-vhs-red text-xl font-bold">
                 Menos que o preço de uma pizza para viver uma noite inteira de investigação e mistério.
               </p>
+              
+              {/* Countdown Timer */}
+              <CountdownTimer />
             </motion.div>
 
             {/* Features */}
@@ -165,7 +187,7 @@ const PricingSection = () => {
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                👉 Quero Investigar Hoje
+                🎯 Resolver esse caso hoje
               </motion.span>
             </motion.button>
 
