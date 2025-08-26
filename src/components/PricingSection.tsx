@@ -28,7 +28,7 @@ const PricingSection = () => {
               🚨 ÚLTIMAS HORAS DA PROMOÇÃO
             </p>
             <p className="font-mono text-aged-paper text-lg mt-2">
-              Preço volta para R$ 59,90 em breve. Não perca esta oportunidade!
+              Preço volta para R$ 57,00 em breve. Não perca esta oportunidade!
             </p>
           </motion.div>
         </div>

@@ -79,7 +79,7 @@ const VideoTestimonialSection = () => {
                 "Uma experiência única que nos deixou vidrados por horas..."
               </p>
               <p className="font-typewriter text-evidence-gold mt-2">
-                - Ana & Carlos, Casal de Investigadores
+                - Ana, Investigadora Amadora
               </p>
             </motion.div>
           </div>
