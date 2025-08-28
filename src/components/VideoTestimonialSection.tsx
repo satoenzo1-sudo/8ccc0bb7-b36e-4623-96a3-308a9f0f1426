@@ -56,7 +56,7 @@ const VideoTestimonialSection = () => {
             </motion.div>
 
             {/* Video embed */}
-            <div className="aspect-video relative rounded-lg overflow-hidden">
+            <div className="aspect-[9/16] relative rounded-lg overflow-hidden max-w-sm mx-auto border-2 border-evidence-gold">
             <iframe
               src="https://www.youtube.com/embed/eLK5SSKBH34"
               title="Depoimento da Fernanda"
