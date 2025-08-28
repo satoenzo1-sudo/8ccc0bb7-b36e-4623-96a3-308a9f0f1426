@@ -58,8 +58,8 @@ const VideoTestimonialSection = () => {
             {/* Video embed */}
             <div className="aspect-video relative rounded-lg overflow-hidden">
             <iframe
-              src="https://www.youtube.com/embed/FI7qlIjCgsM"
-              title="Depoimento - Red Ridge Case"
+              src="https://www.youtube.com/embed/eLK5SSKBH34"
+              title="Depoimento da Fernanda"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -79,7 +79,7 @@ const VideoTestimonialSection = () => {
                 "Uma experiência única que nos deixou vidrados por horas..."
               </p>
               <p className="font-typewriter text-evidence-gold mt-2">
-                - Ana, Investigadora Amadora
+                - Laura, Investigadora Amadora
               </p>
             </motion.div>
           </div>
