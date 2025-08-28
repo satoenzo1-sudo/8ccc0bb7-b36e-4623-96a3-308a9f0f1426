@@ -67,21 +67,6 @@ const VideoTestimonialSection = () => {
             ></iframe>
             </div>
 
-            {/* Video description */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="mt-6 text-center"
-            >
-              <p className="font-mono text-aged-paper text-lg">
-                "Uma experiência única que nos deixou vidrados por horas..."
-              </p>
-              <p className="font-typewriter text-evidence-gold mt-2">
-                - Laura, Investigadora Amadora
-              </p>
-            </motion.div>
           </div>
         </motion.div>
 
