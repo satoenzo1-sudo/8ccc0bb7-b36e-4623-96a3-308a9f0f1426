@@ -98,6 +98,33 @@ const VideoTestimonialSection = () => {
             </motion.span>
           </motion.button>
         </motion.div>
+
+        {/* Animated arrow indicator */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <motion.div
+            animate={{ 
+              y: [0, 10, 0],
+              opacity: [0.6, 1, 0.6]
+            }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="text-evidence-gold text-3xl"
+          >
+            ↓
+          </motion.div>
+          <p className="font-mono text-aged-paper text-sm mt-2 opacity-70">
+            Role para baixo para mais conteúdo
+          </p>
+        </motion.div>
       </div>
     </section>
   );
