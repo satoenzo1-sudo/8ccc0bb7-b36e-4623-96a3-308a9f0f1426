@@ -170,6 +170,29 @@ const HeroSection = () => {
           />
           <span className="relative z-10">👉 Entrar no Caso Agora</span>
         </motion.button>
+
+        {/* Animated arrow indicator */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.0, duration: 0.8 }}
+          className="text-center mt-16"
+        >
+          <motion.div 
+            animate={{ 
+              y: [0, 10, 0],
+              opacity: [0.6, 1, 0.6]
+            }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }}
+            className="text-evidence-gold text-3xl"
+          >
+            ↓
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
